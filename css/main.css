@@ -153,36 +153,50 @@ body {
   display: flex;
   justify-content: center;
   background: skyblue; }
-  #top-bar .toggleButton {
+
+.menu {
+  display: flex;
+  border-radius: 20px;
+  background: #b3e0f2;
+  margin: 10px; }
+  .menu .toggleButton {
+    box-shadow: inset 1px 0px skyblue;
     padding: 10px;
-    background: #b3e0f2;
     transition: all .2s ease-in-out;
     cursor: pointer; }
-    #top-bar .toggleButton:hover {
+    .menu .toggleButton:hover {
       background: #c9e9f6; }
+    .menu .toggleButton:first-child {
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px; }
+    .menu .toggleButton:last-child {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px; }
 
 .toggleButton.selected {
   box-shadow: inset 0px -40px 0px #30aadc; }
+  .toggleButton.selected:hover {
+    box-shadow: inset 0px -40px 0px #5bbce4; }
 
 .logo {
   font-family: 'Indie Flower', cursive;
-  padding: 10px;
+  padding: 20px;
   position: absolute;
-  left: 1%; }
+  left: 0; }
   .logo i {
     color: firebrick;
     transform: scale(1.5) translateX(5px); }
 
 #content {
   background: pink;
-  min-height: calc(100vh - 39px);
+  min-height: calc(100vh - 59px);
   min-width: 100vw;
   display: flex; }
 
 textarea {
   font-family: "Ubuntu Mono", monospace;
   font-size: 1.2rem;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 59px);
   padding: 0;
   margin: 0;
   border: none;
@@ -191,7 +205,7 @@ textarea {
   border-right: 1px solid grey; }
 
 iframe {
-  min-height: calc(100vh - 43px);
+  min-height: calc(100vh - 59px);
   flex: 1;
   background: white;
   margin: 0;
